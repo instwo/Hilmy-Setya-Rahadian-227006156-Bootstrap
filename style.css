@@ -1,0 +1,387 @@
+.background {
+  /* Ganti 'your-image.jpg' dengan path relatif ke gambar Anda */
+  background-image: url("./assets/background1.gif"),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* Tambahkan baris ini */
+  height: 400vh; /* Atur tinggi sesuai kebutuhan Anda */
+  position: relative;
+  display: flex; /* Menambahkan ini */
+  justify-content: center; /* Menambahkan ini */
+  align-items: center; /* Menambahkan ini */
+}
+
+.overlay {
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0) 100%
+  ); /* Gradient hitam dengan tingkat transparansi yang berubah */
+  position: relative;
+  top: 50;
+  left: 50;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-color: #410864c1;
+  height: 80px;
+  margin: 20px auto; /* Menambahkan auto agar navbar berada di tengah */
+  border-radius: 15px;
+  padding: 0.5rem;
+  width: 65%; /* Mengatur lebar navbar */
+}
+
+.offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Menambahkan ini untuk memusatkan elemen anak secara horizontal */
+  padding-left: 50px;
+}
+
+.navbar-collapse {
+  justify-content: center;
+}
+
+@keyframes rgb {
+  0% {
+    color: red;
+  }
+  33% {
+    color: rgb(3, 225, 88);
+  }
+  66% {
+    color: rgb(162, 12, 243);
+  }
+  100% {
+    color: rgb(5, 0, 0);
+  }
+}
+
+.navbar-brand {
+  animation-name: rgb;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.login-button {
+  background-color: #4e0696;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s background-color;
+}
+
+.login-button:hover {
+  background-color: #00b383;
+}
+
+.navbar-toggler {
+  background-color: #ffffff00;
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25res;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.nav-link {
+  color: #595959;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link.active {
+  color: #63018a; /* Ganti dengan kode warna yang Anda inginkan */
+  transition: 0.5s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #6a018a;
+}
+
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: #6d0789;
+    visibility: hidden;
+    transition: 0.1s ease-in-out;
+  }
+
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+
+.hero-section {
+  background: url(hero-bg.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.text-center {
+  text-align: center;
+  font-family: "Pacifico", cursive; /* Mengubah jenis font */
+  font-size: 50px; /* Mengubah ukuran font */
+  color: #4a066cc1; /* Mengubah warna font */
+  padding-top: 45px; /* Menggeser teks ke bawah */
+}
+
+.text-center1 {
+  text-align: center;
+  font-family: "Pacifico", cursive; /* Mengubah jenis font */
+  font-size: 25px; /* Mengubah ukuran font */
+  color: #ffc18b; /* Mengubah warna font */
+  padding-top: 5px; /* Menggeser teks ke bawah */
+}
+
+.text-nav {
+  padding-left: 5px;
+  font-family: "Pacifico", cursive; /* Mengubah jenis font */
+  font-size: 25px; /* Mengubah ukuran font */
+  color: #730099; /* Mengubah warna font */
+  padding-top: 5px; /* Menggeser teks ke bawah */
+  position: relative; /* Menambahkan ini */
+  z-index: 0; /* Menambahkan ini */
+}
+
+.card {
+  background-color: #e6c3e9c1; /* Ganti dengan kode warna yang Anda inginkan */
+  margin: 0;
+  padding: 0;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-custom-width {
+  min-width: 250px; /* Atur lebar minimum sesuai kebutuhan Anda */
+  min-height: 350px; /* Atur tinggi minimum sesuai kebutuhan Anda */
+  margin: auto; /* Ini akan membuat kartu berada di tengah kolom */
+}
+
+.card-custom-width img {
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+  border-radius: 5px;
+  max-height: 200px; /* Tambahkan baris ini */
+  height: auto; /* Tambahkan baris ini */
+}
+
+.card-margin {
+  margin-left: 25px; /* Atur margin kiri sesuai kebutuhan Anda */
+  margin-right: 25px; /* Atur margin kanan sesuai kebutuhan Anda */
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.card-margin {
+  margin-bottom: 50px;
+}
+
+.card-title {
+  font-family: "Almendra";
+  font-size: 22px;
+  color: #000000;
+}
+
+.card-text {
+  font-family: "Almendra";
+  font-size: 17px;
+  color: #000000;
+}
+
+.btn-primary {
+  font-family: "Almendra";
+  font-size: 17px;
+  background-color: transparent; /* Mengubah warna background menjadi transparan */
+
+  color: #420453;
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-primary:hover {
+  background-color: transparent; /* Mengubah warna background menjadi transparan */
+  color: #600671; /* Mengubah warna teks menjadi biru saat hover */
+  outline: none;
+  box-shadow: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-color: #701ba8c1;
+  border-radius: 16px;
+  margin-top: 125px;
+  margin: 125px auto; /* Menambahkan auto agar navbar berada di tengah */
+  height: 175px;
+  width: 75%; /* Mengatur lebar navbar */
+}
+
+.footer p {
+  font-size: 24px;
+  color: #520866;
+  margin: auto;
+}
+
+.footer ul {
+  margin-top: -75px;
+}
+
+.footertext {
+  font-size: 24px;
+  color: #595959;
+  margin: auto;
+}
+
+.footertext:hover {
+  color: #7411b2;
+}
+
+.article-container {
+  background-color: #1f068cc1;
+  border-radius: 15px;
+  width: 65%;
+  margin: auto;
+}
+
+.text-artikel {
+  text-align: center;
+  font-family: "Almendra";
+  font-size: 17px;
+  font-size: 35px; /* Mengubah ukuran font */
+  color: #252525; /* Mengubah warna font */
+  padding-top: 45px; /* Menggeser teks ke bawah */
+}
+
+.text-artikel-konten {
+  margin: 0 45px; /* Menambahkan margin kiri dan kanan sebesar 5px */
+  text-align: justify;
+  font-family: "Almendra";
+  font-size: 18px; /* Mengubah ukuran font */
+  color: #000000; /* Mengubah warna font */
+  padding-top: 35px; /* Menggeser teks ke bawah */
+}
+
+.btn-outline-primary {
+  border-radius: 5px;
+  font-family: "Almendra";
+  font-size: 25px;
+  background-color: #4e095d71; /* Mengubah warna background menjadi transparan */
+  color: #000000;
+  outline: none;
+  box-shadow: none;
+  margin: 0 25px; /* Menambahkan margin kiri dan kanan sebesar 5px */
+  border: none;
+}
+
+.btn-outline-primary:hover {
+  background-color: #d30b0b8e; /* Mengubah warna background menjadi transparan */
+  color: #4c018a;
+  border: none;
+}
+
+.textt {
+  font-family: "Almendra";
+  font-size: 17px;
+  color: #252525; /* Mengubah warna font */
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.texttw {
+  font-family: "Almendra";
+  font-size: 17px;
+  color: #000000; /* Mengubah warna font */
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.formstyle {
+  background-color: #4c076a71; /* Mengubah warna background menjadi transparan */
+  outline: none;
+  color: #000000; /* Mengubah warna font */
+  border: none;
+  font-size: 25px;
+}
+
+.formstyle:hover {
+  background-color: #47086471; /* Mengubah warna background menjadi transparan */
+  outline: none;
+  border: none;
+}
+
+.formstyle:focus {
+  background-color: #56066071; /* Mengubah warna background menjadi transparan */
+  outline: none;
+  color: #000000; /* Mengubah warna font */
+  border: none;
+}
+
+.bubble {
+  background-color: #64085071;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  position: relative;
+}
+
+.bubble::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right-color: #49055c71;
+  border-left: 0;
+  border-right: 0;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.link {
+  text-align: justify;
+  font-family: "Almendra";
+  font-size: 18px; /* Mengubah ukuran font */
+  color: #610582; /* Mengubah warna font */
+}
+
+.link:hover {
+  color: #7d209e; /* Mengubah warna font */
+}
